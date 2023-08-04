@@ -4,17 +4,22 @@ def main():
     #initialize pygame module
     pygame.init()
     #load and set the logo
-    logo = pygame.image.load("BG.png")
+    logo = pygame.image.load("Logo.png")
     pygame.display.set_icon(logo)
     pygame.display.set_caption("Aliens")
     #create surface on screen and set size
-    screen = pygame.display.set_mode((1280,720))
+    screen = pygame.display.set_mode((1024,720))
     #variable for main loop
     running = True
+    #load background image
+    image_bg = pygame.image.load("BG.png")
+    screen.blit(image_bg, (0, 0))
+    pygame.display.flip()
 
     #load player image
-    image = pygame.image.load("Player.png")
-    screen.blit(image, (50, 50))
+    image_player = pygame.image.load("Player.png")
+    image_player.set_alpha(128)
+    screen.blit(image_player, (50, 50))
     pygame.display.flip()
 
     #main loop
