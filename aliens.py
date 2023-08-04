@@ -6,11 +6,16 @@ def main():
     #load and set the logo
     logo = pygame.image.load("BG.png")
     pygame.display.set_icon(logo)
-    pygame.display.set_caption("minimal program")
-    #create surface on screen that has the size 240 x 180
-    screen = pygame.display.set_mode((240,180))
+    pygame.display.set_caption("Aliens")
+    #create surface on screen and set size
+    screen = pygame.display.set_mode((1280,720))
     #variable for main loop
     running = True
+
+    #load player image
+    image = pygame.image.load("Player.png")
+    screen.blit(image, (50, 50))
+    pygame.display.flip()
 
     #main loop
     while running:
